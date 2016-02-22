@@ -1,5 +1,5 @@
 $(window).scroll(function() {
-  if ($(document).scrollTop() > .000001) {
+  if ($(document).scrollTop() > 0) {
     $('.bannerContent').addClass('bannercontentmove');
     $('.subtext').addClass('subtextscrolled');
   } else {
