@@ -16,7 +16,8 @@
 		username VARCHAR(30) NOT NULL,
 		password VARCHAR(99) NOT NULL,
 		email VARCHAR(90),
-		regDate TIMESTAMP
+		isBanned TINYINT(1), 
+		regDate TIMESTAMP,
 		lastLogin TIMESTAMP)";
 		
 	// add a dummy account for testing purposes. Remove once we actually launch.
