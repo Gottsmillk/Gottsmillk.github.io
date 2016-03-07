@@ -39,16 +39,8 @@ $(window).scroll(function() {
 $(function(){	
 
         var $window = $(window);
-	var scrollTime;
-	var scrollDistance;
-	
-	if ($(document).scrollTop() > 80) {
-	scrollTime = 0.5;
-	scrollDistance = 80;
-  } else {
-	scrollTime = 0.5;
-	scrollDistance = 160;
-  }
+	var scrollTime = 0.5;
+	var scrollDistance = 80;
 
 	$window.on("mousewheel DOMMouseScroll", function(event){
 
@@ -57,12 +49,20 @@ $(function(){
 		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
 		var scrollTop = $window.scrollTop();
 		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+		var finalScroll2 = scrollTop - parseInt(delta*(scrollDistance*3));
 
+		  if ($(document).scrollTop() < 80) {
 		TweenMax.to($window, scrollTime, {
 			scrollTo : { y: finalScroll, autoKill:true },
 				ease: Power1.easeOut,
-				overwrite: 5							
+				overwrite: 5	
 			});
-
+		} else {
+		TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll2, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5	
+			});
+		}
 	});
 });
