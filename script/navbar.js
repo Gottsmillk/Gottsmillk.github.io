@@ -51,7 +51,7 @@ $(function(){
 		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
 		var finalScroll2 = scrollTop - parseInt(delta*(scrollDistance*3));
 
-		  if ($(document).scrollTop() < 80) {
+		  if ($(document).scrollTop() <= 80) {
 		TweenMax.to($window, scrollTime, {
 			scrollTo : { y: finalScroll, autoKill:true },
 				ease: Power1.easeOut,
