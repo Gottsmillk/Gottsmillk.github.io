@@ -38,7 +38,7 @@ $(window).scroll(function() {
 });
 $(function(){	
 
-        var $window = $(window);
+    var $window = $(window);
 	var scrollTime = 0.5;
 	var scrollDistance = 80;
 
@@ -66,3 +66,19 @@ $(function(){
 		}
 	});
 });
+
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(e) {
+    if (e.keyCode == "40") {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		var newScrollTop = scrollTop + 80;
+		event.preventDefault();	
+		
+		TweenMax.to($window, 0.5, {
+			scrollTo : { y: newScrollTop, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5	
+			});
+    }
+}
