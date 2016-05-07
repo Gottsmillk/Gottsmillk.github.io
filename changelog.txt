@@ -1,3 +1,33 @@
+v1.1.0.0 5/7/15
+- Changed left hand navigation buttons for temporary names (first is sidebar that is not implemented yet
+and rest are filler text for pages)
+- Fixed banner "#projectHype" positioning, renamed it to "Project Hype", changed font weight to bold,
+repositioned appearing subtext to be closer to moving banner after scroll.
+- Fixed black bar appearing below banner image
+- Shifted login/notification and profile buttons right slightly
+- Re-added button borders for left hand navigation bar buttons
+- Added support for variable usernames for the profile button (the one with dropdown), the
+login/notification and profile buttons will now shift left depending on size and dropdown menu size
+remains static.
+- Changed font of entire site
+- Added comments to navbar.js's javascript elements (note: change navbar.js to a different name)
+- Revamped navigation bar to be hover to dropdown again and be smoother
+- Changed hover transition animation speed to be less subtle and smoother
+- Added subtle shadow under navigation bar
+- Switched profile and login buttons
+- Changed dropdown options for profile to better fit and look nice
+- Fixed menu buttons of nav bar to look better (with border lines and glow on hover),
+and look like actual buttons
+- Relabled "shrink" of navbar to its new function of v1.0.3.0 (becoming fixed)
+- Improved animation for profile dropdown menu to drop down each individual button instead
+of doing a static "window wipe" animation for all three buttons. Changed button size and shape.
+- Successfully completed smooth scroll upon using arrow keys (up and down) to navigate
+- Improved smooth scrolling system by mimicking mouse scroll behavior
+(first scroll down goes exactly under banner, next scrolls are 2x larger increments,
+- Moved navigation bar to left side instead of centered
+- Note: attempt screen scaling (when the window is smaller, since most the site's elements
+do not work well with changed size and resolutions)
+
 v1.0.5.0 3/7/15
 - Creation of a changelog for archiving and ease of posting changes on Github
 - Attempts to create smooth scroll upon using arrow keys to navigate
