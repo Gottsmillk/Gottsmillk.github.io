@@ -1,4 +1,8 @@
+v1.1.0.1 5/7/15
+- Attempt #1 at detecting if Chromium Wheel Scroller extension is enabled for chrome and to prompt
+the user to add it to the blacklist if it is detected.
 v1.1.0.0 5/7/15
+- Bugs: seems to be glitched when used by chromium scroll wheel (only when bouncy edge is enabled)
 - Changed left hand navigation buttons for temporary names (first is sidebar that is not implemented yet
 and rest are filler text for pages)
 - Fixed banner "#projectHype" positioning, renamed it to "Project Hype", changed font weight to bold,

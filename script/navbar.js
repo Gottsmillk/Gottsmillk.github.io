@@ -19,6 +19,16 @@ $(window).scroll(function() {
   }
 });
 
+// Check if user has chromium scroll installed
+$(function() {
+var myExtension = chrome.management.get( "khpcanbeojalbkpgpmjpdkjnkfcgfkhb");
+if (myExtension.enabled)
+{
+alert("You seem to have chromium scroll wheel enabled. Please add this site to the blacklist since it does not support this extension.");
+// use cookies to make sure that this is appears only once
+}
+});
+
 // Smooth scrolling on scroll wheel
 $(function(){	
 
