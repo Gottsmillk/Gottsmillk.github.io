@@ -1,3 +1,4 @@
+// Banner movement on scroll
 $(window).scroll(function() {
   if ($(document).scrollTop() > 0) {
     $('.bannerContent').addClass('bannerContentmove');
@@ -9,36 +10,19 @@ $(window).scroll(function() {
 
   }
 });
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function profile() {
-    document.getElementById("myDropdown").classList.toggle("showdropdown");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropdown')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('showdropdown')) {
-        openDropdown.classList.remove('showdropdown');
-      }
-    }
-  }
-}
+// Navbar static at top after scroll
 $(window).scroll(function() {
   if ($(document).scrollTop() > 80) {
-    $('.nav').addClass('shrink');
+    $('.nav').addClass('fixed');
   } else {
-    $('.nav').removeClass('shrink');
+    $('.nav').removeClass('fixed');
   }
 });
+
+// Smooth scrolling on scroll wheel
 $(function(){	
 
-        var $window = $(window);
+    var $window = $(window);
 	var scrollTime = 0.5;
 	var scrollDistance = 80;
 
@@ -49,7 +33,7 @@ $(function(){
 		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
 		var scrollTop = $window.scrollTop();
 		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-		var finalScroll2 = scrollTop - parseInt(delta*(scrollDistance*3));
+		var finalScroll2 = scrollTop - parseInt(delta*(scrollDistance*2));
 
 		  if ($(document).scrollTop() <= 80) {
 		TweenMax.to($window, scrollTime, {
@@ -66,3 +50,52 @@ $(function(){
 		}
 	});
 });
+
+// Smooth scrolling on down arrow
+window.addEventListener("keydown", checkKeyPressed);
+
+function checkKeyPressed(e) {
+    if (e.keyCode == "40") {
+		var $window = $(window);
+		event.preventDefault();	
+		var scrollTop = $window.scrollTop();
+		var newScrollTop = scrollTop + 80;
+		var newScroll = scrollTop + 120
+		
+		if ($(document).scrollTop() < 160) {
+		TweenMax.to($window, 0.5, {
+			scrollTo : { y: newScrollTop, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5	
+			});
+		} else {
+		TweenMax.to($window, 0.5, {
+			scrollTo : { y: newScroll, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5	
+			});
+		}
+    }
+// Smooth scrolling on up arrow
+	    else if (e.keyCode == "38") {
+		var $window = $(window);
+		event.preventDefault();	
+		var scrollTop = $window.scrollTop();
+		var newScrollTop = scrollTop - 80;
+		var newScroll = scrollTop - 120
+		
+		if ($(document).scrollTop() <= 200) {
+		TweenMax.to($window, 0.5, {
+			scrollTo : { y: newScrollTop, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5	
+			});
+		} else {
+		TweenMax.to($window, 0.5, {
+			scrollTo : { y: newScroll, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5	
+			});
+		}
+    }
+}
