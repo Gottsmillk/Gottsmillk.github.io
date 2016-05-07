@@ -21,12 +21,15 @@ $(window).scroll(function() {
 
 // Check if user has chromium scroll installed
 $(function() {
-var myExtension = chrome.management.get( "khpcanbeojalbkpgpmjpdkjnkfcgfkhb");
-if (myExtension.enabled)
-{
-alert("You seem to have chromium scroll wheel enabled. Please add this site to the blacklist since it does not support this extension.");
-// use cookies to make sure that this is appears only once
+var detect = function(base, if_installed, if_not_installed) {
+    var s = document.createElement('script');
+    s.onerror = if_not_installed;
+    s.onload = if_installed;
+    document.body.appendChild(s);
+    s.src = base + '/manifest.json';
 }
+detect('chrome-extension://' + khpcanbeojalbkpgpmjpdkjnkfcgfkhb, function() {alert('You seem to have chromium scroll wheel enabled. Please add this site to the blacklist since it does not support this extension.');});
+// use cookies to make sure that this is appears only once
 });
 
 // Smooth scrolling on scroll wheel

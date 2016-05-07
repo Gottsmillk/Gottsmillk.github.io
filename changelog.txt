@@ -1,3 +1,6 @@
+v1.1.0.2 5/7/15
+- Attempt #2 at detecting if Chromium Wheel Scroller extension is enabled for chrome and to prompt
+the user to add it to the blacklist if it is detected.
 v1.1.0.1 5/7/15
 - Attempt #1 at detecting if Chromium Wheel Scroller extension is enabled for chrome and to prompt
 the user to add it to the blacklist if it is detected.
