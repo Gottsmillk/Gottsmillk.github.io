@@ -3,14 +3,12 @@
     font-family: Open Sans;
     src: url(../font/OpenSans-Regular.ttf);
 }
-
 @font-face {
     font-family: Open Sans;
     src: url(../font/OpenSans-Regular.ttf);
 }
 
 /*HTML Base and Body*/
-
 html {
     height: 100%;
     width: 100vw;
@@ -19,14 +17,12 @@ html {
     overflow-x: hidden;
     display: inline-block;
 }
-
 body {
     background-color: #1b1b1b;
     margin: 0;
     padding: 0;
     text-align: center;
 }
-
 p {
     font-size: 12;
     font-family: Open Sans;
@@ -34,33 +30,42 @@ p {
 .top {
     background-color: #dddddd;
     display: block;
-    position: absolute;
+    position: relative;
     top: 0px;
-    text-align: center;
+    text-align: left;
     width: 100%;
     height: 80px;
     z-index: 0;
 }
+.title {
+    font-size: 50px;
+    font-family: Open Sans;
+	font-weight: 900;
+	margin-left: 20px;
+}
+
 /*Nav bar*/
 .nav {
     background-color: #333;
-    display: inline;
-    position: absolute;
-    top: 80px;
+    display: block;
+    position: relative;
+    top: 0px;
     left: 0%;
-    padding: 0px;
-    text-align: left;
-    width: 100%;
+    width: 98.76%;
     height: 40px;
 	box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.4);
     z-index: 100;
 }
-
-.fixed {
-    position: fixed;
-    top: 0px;
+.nav a {
+	transition: all .5s;
+    display:block;
+    padding:8px 16px;
+    line-height:1.2em;
+    color:#fff;
+    font-family: Open Sans;
+    text-decoration: none;
+    font-size: 20px;
 }
-
 .links {
 	transition: all .5s;
     margin: 0px 0px;
@@ -72,27 +77,28 @@ p {
     font-family: Open Sans;
     font-size: 0px;
 }
-
+.links2 {
+	transition: all .5s;
+	position: relative;
+	top: 0px;
+	float: right;
+}
 .link {
     border-left:1px solid #595959;
 	transition: all .5s;
-    display: inline-block;
     margin: 0px 0px;
     padding:0px 0px;
     padding-right: 0%;
     font-size: 20px;
 }
-
 .link a {
     transition: all .5s;
-    display: block;
     text-decoration: none;
     cursor: pointer;
     color: #dddddd;
 	padding:8px 16px;
     line-height:1.2em;
 }
-
 .lastlink {
 	transition: all .5s;
     display: inline-block;
@@ -101,7 +107,6 @@ p {
     padding-right: 0%;
     font-size: 20px;
 }
-
 .lastlink a {
     display: block;
     text-decoration: none;
@@ -113,7 +118,58 @@ p {
 	border-left:1px solid #595959;
 	border-right:1px solid #595959;
 }
-
+.login {
+    border-left:1px solid #595959;
+    border-right:1px solid #595959;
+}
+.username {
+	position: relative;
+	width: auto;
+	right: 0px;
+	text-align: right;
+}
+.nav ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.nav li{
+	float: left;
+}
+.nav li ul {
+    background:#273754;
+	right: 0px;
+	width: 110px;
+	z-index:1;
+    position:absolute;
+    top:40px;
+	float: right;
+}
+.nav li ul a {
+    border:none;
+    text-align: center;
+	font-size: 16px;
+}
+.nav li ul li {
+    width:59px;
+    overflow:hidden;
+    height:0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+	width: 110px;
+	float: right;
+}
+.nav a:hover {
+    text-decoration:none;
+}
+.nav li ul a:hover {
+    background:rgba(0,0,0,0.2);
+}
+.nav ul > li:hover ul li {
+    height:40px;
+}
 .link :hover {
     background-color: #595959;
 }
@@ -129,162 +185,16 @@ p {
 .username :hover {
     background-color: #595959;
 }
-.links2 {
-	transition: all .5s;
-	position:relative;
-	top: -40px;
-	float: right;
-	right: 2%;
-}
-.login {
-	position: relative;
-    border-left:1px solid #595959;
-    border-right:1px solid #595959;
-	right: -18px;
-}
-.username {
-	position: relative;
-	width: auto;
-	right: -18px;
-	text-align: right;
-
-}
-
-.nav ul {
-    *zoom:1;
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-.nav ul:before,.nav ul:after {
-    content:"";
-    display:table;
-}
-.nav ul:after {
-    clear:both;
-}
-.nav ul > li {
-    float:left;
-    position:relative;
-}
-.nav a {
-	transition: all .5s;
-    display:block;
-    padding:8px 16px;
-    line-height:1.2em;
-    color:#fff;
-    font-family: Open Sans;
-    text-decoration: none;
-    font-size: 20px;
-}
-.nav a:hover {
-    text-decoration:none;
-}
-.nav li ul {
-    background:#273754;
-	right: -18px;
-	position: fixed;
-	width: 110px;
-	z-index:1;
-}
-.nav li ul li {
-    width:59px;
-}
-.nav li ul a {
-    border:none;
-    text-align: center;
-}
-.nav li ul a:hover {
-    background:rgba(0,0,0,0.2);
-}
-.nav li ul {
-    position:absolute;
-    top:40px;
-	float: right;
-    z-index:1;
-}
-.nav li ul li {
-    overflow:hidden;
-    height:0;
-    -webkit-transition:height 200ms ease-in;
-    -moz-transition:height 200ms ease-in;
-    -o-transition:height 200ms ease-in;
-    transition:height 200ms ease-in;
-	width: 110px;
-	float: right;
-}
-.nav ul > li:hover ul li {
-    height:40px;
-}
-.nav li{
-	float: left;
-}
-
-/*AFTER WEBSITE IS SCROLLED*/
-
-/*Banner*/
-.banner {
-    float: left;
-    position: relative;
-    background-image: url("../img/tempBanner.jpg");
-    margin-top: 40px;
-    margin-right: 0;
-    margin-bottom: 80px;
-    margin-left: 0;
-    padding-left: 0px;
-    padding: 0;
-    left: 0px;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    width: 100%;
-    height: auto;
-    opacity: 0.7;
-    text-align: center;
-    font-family: Open Sans;
-    font-size: 0px;
-    top: 80px;
-}
-
-.banner img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    opacity: 0.7;
-}
-
-.bannerContent {
-	text-align: left;
-	float: left;
-    width: 50%;
-    height: 80px;
-    position: absolute;
-    padding-top: 1%;
-    size: 50%;
-    top:-130px;
-    left: 14px;
-    -webkit-transition: all 1.2s ease;
-    transition: all 1.2s ease;
-}
-
-.title {
-    font-size: 50px;
-    font-family: Open Sans;
-	font-weight: 900;
-}
-
-.subtextscrolled {
-    opacity: 1.0;
-}
 
 /*Body*/
 .main {
     margin: 0 auto;
     padding: 0;
-    display: inline-block;
-    background-color: white;
+    display: block;
+    background-color: #dddddd;
     height: 100%;
     width: 100%;
     text-align: center;
-    opacity: 0.8;
-    top: 80px;
+    opacity: 1;
+    top: 0px;
 }

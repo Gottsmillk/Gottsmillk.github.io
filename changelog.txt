@@ -1,6 +1,14 @@
+v1.2.0.0 5/8/16
+- Cleaned up code
+- Revamped code structure completely
+- Fixed some changelog miswording
+- Removed banner image, looks uglier but results in cleaner code. Might reimplement later.
+- Fixed navbar changing size, revamped navbar behavior, should work with chromium now
+- Found correct text for sidebar button for nav bar
+- Renamed navbar.js to fit its function more, it is now homepage-javascript.js
 v1.1.1.0 5/8/16
 - Fixed date error in changelog, 2016 instead of 2015
-- Removed banner changing on scroll, conflicted with different resolutions
+- Removed logo changing on scroll, conflicted with different resolutions
 - Attempt #3 at fixing Chromium Wheel Scroller problem, this time trying to override Chromium's
 actions
 v1.1.0.2 5/7/16
@@ -13,8 +21,8 @@ v1.1.0.0 5/7/16
 - Bugs: seems to be glitched when used by chromium scroll wheel (only when bouncy edge is enabled)
 - Changed left hand navigation buttons for temporary names (first is sidebar that is not implemented yet
 and rest are filler text for pages)
-- Fixed banner "#projectHype" positioning, renamed it to "Project Hype", changed font weight to bold,
-repositioned appearing subtext to be closer to moving banner after scroll.
+- Fixed logo "#projectHype" positioning, renamed it to "Project Hype", changed font weight to bold,
+repositioned appearing subtext to be closer to moving logo after scroll.
 - Fixed black bar appearing below banner image
 - Shifted login/notification and profile buttons right slightly
 - Re-added button borders for left hand navigation bar buttons

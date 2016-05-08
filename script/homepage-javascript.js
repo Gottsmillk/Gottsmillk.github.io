@@ -1,11 +1,13 @@
-// Navbar static at top after scroll
+// Navbar static at top after scroll, fixes navbar size after scroll, fixes body positioning after scroll
 $(window).scroll(function() {
-  if ($(document).scrollTop() > 80) {
-	$('.nav').css("position", "fixed");
-	$('.nav').css("top", "0px");
+  if ($(document).scrollTop() < 80) {
+	$('.nav').css("position", "relative");
+	$('.nav').css("width", "98.76%");
+	$('.main').css("margin-top", "0px");
   } else {
-	$('.nav').css("position", "absolute");
-	$('.nav').css("top", "80px");
+	$('.nav').css("position", "fixed");
+	$('.nav').css("width", "100%");
+	$('.main').css("margin-top", "40px");
   }
 });
 
@@ -39,19 +41,6 @@ $(function(){
 			});
 		}
 	});
-	
-// Check if user has chromium scroll installed
-// use cookies to make sure that this is appears only once
-	var detect = function(base, if_installed, if_not_installed) {
-    var s = document.createElement('script');
-    s.onerror = if_not_installed;
-    s.onload = if_installed;
-    document.body.appendChild(s);
-    s.src = base + '/manifest.json';
-}
-detect('chrome-extension://' + khpcanbeojalbkpgpmjpdkjnkfcgfkhb, function() {alert('You seem to have chromium scroll wheel enabled. Please add this site to the blacklist since it does not support this extension.');});
-
-});
 
 // Smooth scrolling on down arrow
 window.addEventListener("keydown", checkKeyPressed);
@@ -78,6 +67,7 @@ function checkKeyPressed(e) {
 			});
 		}
     }
+
 // Smooth scrolling on up arrow
 	    else if (e.keyCode == "38") {
 		var $window = $(window);
