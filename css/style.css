@@ -253,39 +253,23 @@ p {
 }
 
 .bannerContent {
+	text-align: left;
+	float: left;
     width: 50%;
-    height: auto;
+    height: 80px;
     position: absolute;
     padding-top: 1%;
     size: 50%;
-    margin: 0 auto;
     top:-130px;
-    left:-13%;
+    left: 14px;
     -webkit-transition: all 1.2s ease;
     transition: all 1.2s ease;
-}
-
-.bannerContentmove {
-    padding-top: 7%;
-    margin: 0 auto;
-    position: absolute;
-    top:0;
-    left:0;
 }
 
 .title {
     font-size: 50px;
     font-family: Open Sans;
 	font-weight: 900;
-}
-
-.subtext {
-	position: relative;
-	top: -25px;
-    opacity: 0.0;
-    font-size: 16px;
-    -webkit-transition: all 1.2s ease;
-    transition: all 1.2s ease;
 }
 
 .subtextscrolled {
