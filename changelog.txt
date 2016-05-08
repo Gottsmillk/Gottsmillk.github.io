@@ -1,3 +1,6 @@
+v1.2.0.1 5/8/16
+- Renamed homepage-javascript to homepage for better usability and hopefully fixing javascript not
+working anymore
 v1.2.0.0 5/8/16
 - Cleaned up code
 - Revamped code structure completely
