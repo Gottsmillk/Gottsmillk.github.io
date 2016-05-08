@@ -1,3 +1,7 @@
+v1.2.0.2 5/8/16
+- Fixed javascript error
+- Fixed navbar left hand buttons being gray instead of white
+- Re-shifted right hand buttons to the left slightly
 v1.2.0.1 5/8/16
 - Renamed homepage-javascript to homepage for better usability and hopefully fixing javascript not
 working anymore
