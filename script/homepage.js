@@ -27,7 +27,7 @@ $(function(){
 		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
 		var finalScroll2 = scrollTop - parseInt(delta*(scrollDistance*2));
 
-		  if ($(document).scrollTop() <= 80) {
+		if ($(document).scrollTop() <= 80) {
 		TweenMax.to($window, scrollTime, {
 			scrollTo : { y: finalScroll, autoKill:true },
 				ease: Power1.easeOut,
@@ -41,6 +41,7 @@ $(function(){
 			});
 		}
 	});
+});
 
 // Smooth scrolling on down arrow
 window.addEventListener("keydown", checkKeyPressed);
