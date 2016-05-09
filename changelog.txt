@@ -1,3 +1,6 @@
+v1.2.0.3 5/8/16
+- Fixed remaining navbar issues, scales correctly for most resolutions now
+- Added more filler text to fit larger resolutions
 v1.2.0.2 5/8/16
 - Fixed javascript error
 - Fixed navbar left hand buttons being gray instead of white
