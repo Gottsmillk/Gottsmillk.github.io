@@ -1,42 +1,48 @@
 <!DOCTYPE HTML>
-
 <html>
-  <head>
+
+<head> <!-- Homepage Head -->
     <meta charset="utf-8">
-    <title>#ProjectHype Home</title>
+    <title>Project Hype</title>
     <link rel="stylesheet" style="text/css" href="css/style.css" />
     <script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="script/navbar.js"></script>
+    <script type="text/javascript" src="script/homepage.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-  </head>
+</head>
 
-  <body>
+<body> <!-- Homepage Body -->
 
+<div class="top">  <!-- Top of page where logo is -->
+	<span class="title">Project Hype</span>
+</div>
+
+ <!-- Navigation Bar -->
 <nav class="nav nav-default nav-fixed-top" role="navigation">
-  <div class="container">
-      <ul class="links">
-        <li class="link"><a href="#">Home</a></li>
-        <li class="link"><a href="#">aPage</a></li>
-        <li class="link"><a href="#">anotherPage</a></li>
-        <li class="link"><a href="#">About</a></li>
-      </ul>
-  </div>
+    <ul class="links">
+        <li class="link"><a href="#">☰</a></li>
+        <li class="link"><a href="#">Page 1</a></li>
+        <li class="link"><a href="#">Page 2</a></li>
+        <li class="lastlink"><a href="#">Page 3</a></li>
+    </ul>
+	<ul class="links2">
+        <li class="login"><a href="#">Login/Notifications</a></li>
+        <li>
+            <div class="username"><a href="#">Username</a></div>
+            <ul>
+				<div class="dropdown">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Log out</a></li>
+				</div>
+            </ul>
+        </li>
+		</ul>
 </nav>
 
-    <section class="banner">
-      <img src="img/tempBanner.jpg">
-      <div class="bannerContent">
-        <span class="title">#projectHype</span>
-        <p class="subtext">
-          <br> What's happening out there?
-          <br> Who the fuck knows, do you?
-          <br> Make a post.
-        </p>
-      </div>
-    </section>
-
+ <!-- Everything below the navigation bar -->
     <div class="main">
       The standard Lorem Ipsum passage, used since the 1500s
 

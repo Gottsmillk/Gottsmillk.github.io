@@ -1,0 +1,91 @@
+v1.2.0.2 5/8/16
+- Fixed javascript error
+- Fixed navbar left hand buttons being gray instead of white
+- Re-shifted right hand buttons to the left slightly
+v1.2.0.1 5/8/16
+- Renamed homepage-javascript to homepage for better usability and hopefully fixing javascript not
+working anymore
+v1.2.0.0 5/8/16
+- Cleaned up code
+- Revamped code structure completely
+- Fixed some changelog miswording
+- Removed banner image, looks uglier but results in cleaner code. Might reimplement later.
+- Fixed navbar changing size, revamped navbar behavior, should work with chromium now
+- Found correct text for sidebar button for nav bar
+- Renamed navbar.js to fit its function more, it is now homepage-javascript.js
+v1.1.1.0 5/8/16
+- Fixed date error in changelog, 2016 instead of 2015
+- Removed logo changing on scroll, conflicted with different resolutions
+- Attempt #3 at fixing Chromium Wheel Scroller problem, this time trying to override Chromium's
+actions
+v1.1.0.2 5/7/16
+- Attempt #2 at detecting if Chromium Wheel Scroller extension is enabled for chrome and to prompt
+the user to add it to the blacklist if it is detected.
+v1.1.0.1 5/7/16
+- Attempt #1 at detecting if Chromium Wheel Scroller extension is enabled for chrome and to prompt
+the user to add it to the blacklist if it is detected.
+v1.1.0.0 5/7/16
+- Bugs: seems to be glitched when used by chromium scroll wheel (only when bouncy edge is enabled)
+- Changed left hand navigation buttons for temporary names (first is sidebar that is not implemented yet
+and rest are filler text for pages)
+- Fixed logo "#projectHype" positioning, renamed it to "Project Hype", changed font weight to bold,
+repositioned appearing subtext to be closer to moving logo after scroll.
+- Fixed black bar appearing below banner image
+- Shifted login/notification and profile buttons right slightly
+- Re-added button borders for left hand navigation bar buttons
+- Added support for variable usernames for the profile button (the one with dropdown), the
+login/notification and profile buttons will now shift left depending on size and dropdown menu size
+remains static.
+- Changed font of entire site
+- Added comments to navbar.js's javascript elements (note: change navbar.js to a different name)
+- Revamped navigation bar to be hover to dropdown again and be smoother
+- Changed hover transition animation speed to be less subtle and smoother
+- Added subtle shadow under navigation bar
+- Switched profile and login buttons
+- Changed dropdown options for profile to better fit and look nice
+- Fixed menu buttons of nav bar to look better (with border lines and glow on hover),
+and look like actual buttons
+- Relabled "shrink" of navbar to its new function of v1.0.3.0 (becoming fixed)
+- Improved animation for profile dropdown menu to drop down each individual button instead
+of doing a static "window wipe" animation for all three buttons. Changed button size and shape.
+- Successfully completed smooth scroll upon using arrow keys (up and down) to navigate
+- Improved smooth scrolling system by mimicking mouse scroll behavior
+(first scroll down goes exactly under banner, next scrolls are 2x larger increments,
+- Moved navigation bar to left side instead of centered
+- Note: attempt screen scaling (when the window is smaller, since most the site's elements
+do not work well with changed size and resolutions)
+
+v1.0.5.0 3/7/16
+- Creation of a changelog for archiving and ease of posting changes on Github
+- Attempts to create smooth scroll upon using arrow keys to navigate
+
+v1.0.4.1 3/6/16
+- Small adjustment to scroll to make the first two scrolls down to be by increments
+of 80px.
+
+v1.0.4.0 3/6/16
+- Changed banner to not overlap with the body and not cut off from the navbar
+- Changed the height of the navbar by +10px
+- Scaled all other elements to reflect the above changes
+- Turned the logo subtext to a friendlier version
+- Completed variable scrolling, which changes the first scroll down to be
+by an increment of 80px, followed by speeding up by 3x afterword.
+
+v1.0.3.0 3/6/16
+- Moved the profile and login buttons to hopefully a correct format
+- Moved logo/banner to the top
+- Moved the navbar to be relative until 80px down the screen where it then becomes static
+- Reversed animation for logo and subtext
+- Made the profile dropdown bar click to open instead of hover to open.
+
+v1.0.2.0 2/23/16
+- Adjusted the Login and Profile buttons
+- Added an animation to the dropdown menu for Profiles
+
+v1.0.1.0 2/22/16
+- Changed color of navbar animation
+- Added just basic stuff to make it visually appealing
+- Created login and profile buttons.
+
+v1.0.0.0 2/16/16
+- Initial creation, base website created by Anthony.

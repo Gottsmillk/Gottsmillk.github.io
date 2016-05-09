@@ -1,0 +1,115 @@
+      <ul class="links2">
+        <li class="dropdown">Profile</a></li>
+		<li class="link2"><a href="#">Login</a></li>
+	        <li class="dropdown-content"><a href="#">Link 1</a></li>
+	        <li class="dropdown-content"><a href="#">Link 2</a></li>
+	        <li class="dropdown-content"><a href="#">Link 3</a></li>
+	  </ul>
+
+.links2 :hover {
+    background-color: #CECECE;
+}
+
+.links2 {
+    margin: 0px 0px;
+    padding: 0px;
+    list-style-type: none;
+    position: relative;
+    top: 0px;
+	left: 0px;
+    font-family: monty;
+    font-size: 0px;
+	text-align: right;
+	top: -40px;
+}
+
+.link2 {
+	transition: all 1s;
+    display: inline-block;
+    float:right;
+    margin: 0px 0px;
+    padding:0px 0px;
+    padding-right: 0%;
+    font-size: 20px;
+}
+
+.link2 > a {
+    display: block;
+    text-decoration: none;
+    transition: all 1s;
+    cursor: pointer;
+    color: #dddddd;
+	padding:8px 16px;
+    line-height:1.2em;
+	border-left:1px solid #595959;
+	border-right:1px solid #595959;
+}
+
+/*Dropdown Menu*/
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	transition: all 1s;
+    display: block;
+    float:right;
+    margin: 0px 0px;
+    padding:0px 0px;
+    padding-right: 0%;
+    font-size: 20px;
+	padding:8px 16px;
+    line-height:1.2em;
+	border-left:1px solid #595959;
+	color: #dddddd;
+}
+
+.links2:hover .dropdown-content{
+    height:40px;
+}
+
+.dropdown > a {
+    display: block;
+    text-decoration: none;
+    transition: all 1s;
+    cursor: pointer;
+    color: #dddddd;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow:hidden;
+    height:0px;
+	text-align: center;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+    position: relative;
+    background-color: #f9f9f9;
+	width: 166px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size: 20px;
+    left: 87.7%;
+    top: 40px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #CECECE}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover {
+    background-color: #CECECE;
+}
+
+.showdropdown {
+    height:40px;
+	width: 166px;
+}
