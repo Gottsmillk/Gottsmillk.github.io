@@ -1,13 +1,11 @@
 // Navbar static at top after scroll, fixes navbar size after scroll, fixes body positioning after scroll
 $(window).scroll(function() {
   if ($(document).scrollTop() < 80) {
-	$('.nav').css("position", "relative");
-	$('.nav').css("width", "98.76%");
-	$('.main').css("margin-top", "0px");
+	$('.nav').css("position", "absolute");
+	$('.nav').css("top", "80px");
   } else {
 	$('.nav').css("position", "fixed");
-	$('.nav').css("width", "100%");
-	$('.main').css("margin-top", "40px");
+	$('.nav').css("top", "0px");	
   }
 });
 
