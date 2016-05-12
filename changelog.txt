@@ -1,8 +1,13 @@
 To do:
-- Add wrapper container to keep smaller side borders
-- Work on sidebar, make its length the length of side border
+- Work on sidebar (width too short to fit within margin)
 
-v1.2.0.4 5/8/16
+v1.2.0.5 5/11/16
+- Fixed a small typo on changelog
+- Fixed nav button username's dropdown menu button sizes, had an abnormal gap between them before
+- Added wrapper container to contain body by 10% width on each side
+- Added a filler above body to move body down 30px and create space
+
+v1.2.0.4 5/9/16
 - Fixed formatting for changelog, recent entries were not separated from one another
 - Added a to-do list
 - Fixed a small typo on changelog

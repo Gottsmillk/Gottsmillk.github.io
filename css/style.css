@@ -148,7 +148,7 @@ p {
     z-index:1;
     position:absolute;
     top:40px;
-	float: right;
+    float: right;
 }
 .nav li ul a {
     border:none;
@@ -173,7 +173,7 @@ p {
     background:rgba(0,0,0,0.2);
 }
 .nav ul > li:hover ul li {
-    height:40px;
+    height:34px;
 }
 .link :hover {
     background-color: #595959;
@@ -192,9 +192,15 @@ p {
 }
 
 /*Body*/
+.under-navbar {
+    background-color: #dddddd;
+    position: relative;
+    height: 30px;
+    z-index: 3;
+}
 .main {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0;
     display: block;
     background-color: #dddddd;
     height: 100%;
@@ -202,4 +208,11 @@ p {
     text-align: center;
     opacity: 1;
     top: 0px;
+}
+.container {
+    position: relative;
+    background-color: #dddddd;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
