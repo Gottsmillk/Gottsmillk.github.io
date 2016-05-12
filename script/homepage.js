@@ -9,6 +9,28 @@ $(window).scroll(function() {
   }
 });
 
+//Sidebar opening and collapsing
+function sidebar() {
+	$('.sidebar').toggleClass('sidebarexpand');
+}
+
+// Close the sidebar menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.link-sidebar a') 
+  && !event.target.matches('.sidebar')
+  && !event.target.matches('.sidebar-header a')) {
+
+    var dropdowns = document.getElementsByClassName("sidebar");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('sidebarexpand')) {
+        openDropdown.classList.remove('sidebarexpand');
+      }
+    }
+  }
+}
+
 // Smooth scrolling on scroll wheel
 $(function(){	
 

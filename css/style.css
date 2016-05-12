@@ -103,6 +103,22 @@ p {
     padding:8px 16px;
     line-height:1.2em;
 }
+.link-sidebar {
+    border-left:1px solid #595959;
+    transition: all .5s;
+    margin: 0px 0px;
+    padding:0px 0px;
+    padding-right: 0%;
+    font-size: 20px;
+}
+.link-sidebar a {
+    transition: all .5s;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    padding:8px 16px;
+    line-height:1.2em;
+}
 .lastlink {
     transition: all .5s;
     display: inline-block;
@@ -178,6 +194,12 @@ p {
 .link :hover {
     background-color: #595959;
 }
+.link-sidebar :hover {
+    background-color: #595959;
+}
+.link-sidebar a:hover {
+    background-color: #595959;
+}
 .link a:hover {
     background-color: #595959;
 }
@@ -191,12 +213,49 @@ p {
     background-color: #595959;
 }
 
+/*Sidebar*/
+.sidebar {
+    overflow:hidden;
+    -webkit-transform:perspective(400) rotate3d(0,0,0,0);
+    transition:350ms;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    background-color: #333;
+    z-index: 1;
+}
+.sidebar-header a {
+    text-align: center;
+    transition: all .5s;
+    display:block;
+    padding:8px 16px;
+    color:#fff;
+    font-family: Open Sans;
+    text-decoration: none;
+    font-size: 20px;
+}
+.category a {
+    text-align: center;
+    transition: all .5s;
+    display:block;
+    padding:8px 16px;
+    color:#fff;
+    font-family: Open Sans;
+    text-decoration: none;
+    font-size: 20px;
+}
+.category a:hover {
+    background-color: #595959;
+}
+.sidebarexpand {
+    width: 160px;
+}
+
 /*Body*/
 .under-navbar {
     background-color: #dddddd;
     position: relative;
     height: 30px;
-    z-index: 3;
 }
 .main {
     margin: 0 auto;
