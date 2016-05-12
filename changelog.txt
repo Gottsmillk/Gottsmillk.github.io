@@ -1,11 +1,15 @@
 To do:
 (nothing here for now!)
 
+v1.2.1.1 5/11/16
+- Added missing change for v1.2.1.0 in changelog
+
 v1.2.1.0 5/11/16
 - Removed filler link "#" for username button since it is only a dropdown
 - Changed label for body on index
 - Removed z-index for filler above body, unnecessary
 - Added a completely working sidebar, collapses when clicked outside or a link is chosen
+- Changed text for notifications/login to just notifications
 
 v1.2.0.5 5/11/16
 - Fixed a small typo on changelog
