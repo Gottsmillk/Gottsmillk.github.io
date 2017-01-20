@@ -17,6 +17,12 @@ html {
     overflow-x: hidden;
     display: inline-block;
 }
+.pic1 {
+	position: relative;
+	top: -130px;
+    height: auto;
+    width: 100%; /* ie8 */
+}
 body {
     background-color: #1b1b1b;
     margin: 0;
@@ -35,13 +41,32 @@ p {
     text-align: left;
     width: 100%;
     height: 80px;
-    z-index: 0;
+    z-index: 2;
 }
 .title {
-    font-size: 50px;
+	color: white;
+   -webkit-text-stroke: 2px black;
+	position: absolute;
+    font-weight: 1000;
+    font-size: 60px;
     font-family: Open Sans;
-    font-weight: 900;
     margin-left: 20px;
+	z-index: 2;
+}
+
+.desc1 {
+	word-wrap: break-word;
+	color: white;
+	width: 400px;
+   -webkit-text-stroke: 2px black;
+	position: absolute;
+    font-weight: 1000;
+    font-size: 60px;
+    font-family: Open Sans;
+	z-index: 2;
+	right: 0%;
+	margin-right: 30px;
+	bottom: 10px;
 }
 
 /*Nav bar*/
@@ -56,7 +81,7 @@ p {
     left: 0%;
     width: 100%;
     height: 40px;
-    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.4);
+    /*box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.4);*/
     z-index: 100;
 }
 .nav a {
@@ -216,8 +241,6 @@ p {
 /*Sidebar*/
 .sidebar {
     overflow:hidden;
-    -webkit-transform:perspective(400) rotate3d(0,0,0,0);
-    transition:350ms;
     position: absolute;
     width: 0px;
     height: 100%;
@@ -226,9 +249,8 @@ p {
 }
 .sidebar-header a {
     text-align: center;
-    transition: all .5s;
     display:block;
-    padding:8px 16px;
+    padding:28px 16px;
     color:#fff;
     font-family: Open Sans;
     text-decoration: none;
@@ -236,9 +258,8 @@ p {
 }
 .category a {
     text-align: center;
-    transition: all .5s;
     display:block;
-    padding:8px 16px;
+    padding:28px 16px;
     color:#fff;
     font-family: Open Sans;
     text-decoration: none;
@@ -247,15 +268,11 @@ p {
 .category a:hover {
     background-color: #595959;
 }
-.sidebarexpand {
-    width: 160px;
-}
-
 /*Body*/
 .under-navbar {
     background-color: #dddddd;
     position: relative;
-    height: 30px;
+    height: 0px;
 }
 .main {
     margin: 0 auto;
@@ -272,6 +289,36 @@ p {
     position: relative;
     background-color: #dddddd;
     height: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+/*@media screen and (max-height: 1366px) and (max-width: 1024px){ /*Ipad Pro*/
+
+/*.pic1 {
+    max-width: 130%;
+	left: 0%;
+	top: -90px;
+    height: auto;
+    width: auto;
+}
+
+}
+@media screen and (max-height: 1024px) and (max-width: 768px){ /*Ipad*/
+
+/*.pic1 {
+    max-width: 120%;
+    height: auto;
+    width: auto;
+}
+
+}
+@media screen and (max-height: 736px) and (max-width: 414px){ /*Iphone 6 Plus */
+
+/*.pic1 {
+    max-width: 280%;
+	left: 90%;
+    height: auto;
+    width: auto; 
+}*/
+
 }
