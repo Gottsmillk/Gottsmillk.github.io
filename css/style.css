@@ -40,24 +40,27 @@ p {
 .title {
     font-size: 50px;
     font-family: Open Sans;
-	font-weight: 900;
-	margin-left: 20px;
+    font-weight: 900;
+    margin-left: 20px;
 }
 
 /*Nav bar*/
+.behind-navbar {
+    height: 40px;
+}
 .nav {
     background-color: #333;
     display: block;
-    position: relative;
-    top: 0px;
+    position: absolute;
+    top: 80px;
     left: 0%;
-    width: 98.76%;
+    width: 100%;
     height: 40px;
-	box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.4);
     z-index: 100;
 }
 .nav a {
-	transition: all .5s;
+    transition: all .5s;
     display:block;
     padding:8px 16px;
     line-height:1.2em;
@@ -67,25 +70,26 @@ p {
     font-size: 20px;
 }
 .links {
-	transition: all .5s;
+    transition: all .5s;
     margin: 0px 0px;
     padding: 0px;
     list-style: none;
     position: relative;
     top: 0px;
-	left: 1px;
+    left: 1px;
     font-family: Open Sans;
     font-size: 0px;
 }
 .links2 {
-	transition: all .5s;
-	position: relative;
-	top: 0px;
-	float: right;
+    list-style: none;
+    transition: all .5s;
+    position: relative;
+    top: 0px;
+    float: right;
 }
 .link {
     border-left:1px solid #595959;
-	transition: all .5s;
+    transition: all .5s;
     margin: 0px 0px;
     padding:0px 0px;
     padding-right: 0%;
@@ -96,11 +100,27 @@ p {
     text-decoration: none;
     cursor: pointer;
     color: white;
-	padding:8px 16px;
+    padding:8px 16px;
+    line-height:1.2em;
+}
+.link-sidebar {
+    border-left:1px solid #595959;
+    transition: all .5s;
+    margin: 0px 0px;
+    padding:0px 0px;
+    padding-right: 0%;
+    font-size: 20px;
+}
+.link-sidebar a {
+    transition: all .5s;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    padding:8px 16px;
     line-height:1.2em;
 }
 .lastlink {
-	transition: all .5s;
+    transition: all .5s;
     display: inline-block;
     margin: 0px 0px;
     padding:0px 0px;
@@ -113,43 +133,43 @@ p {
     transition: all .5s;
     cursor: pointer;
     color: white;
-	padding:8px 20px;
+    padding:8px 20px;
     line-height:1.2em;
-	border-left:1px solid #595959;
-	border-right:1px solid #595959;
+    border-left:1px solid #595959;
+    border-right:1px solid #595959;
 }
 .login {
     border-left:1px solid #595959;
     border-right:1px solid #595959;
 }
 .username {
-	position: relative;
-	width: auto;
-	right: 0px;
-	text-align: right;
+    position: relative;
+    width: auto;
+    right: 0px;
+    text-align: right;
 }
 .nav ul {
     list-style:none;
     margin:0;
     padding:0;
-	right: 1%;
+    right: 1%;
 }
 .nav li{
-	float: left;
+    float: left;
 }
 .nav li ul {
     background:#273754;
-	right: 0px;
-	width: 110px;
-	z-index:1;
+    right: 0px;
+    width: 110px;
+    z-index:1;
     position:absolute;
     top:40px;
-	float: right;
+    float: right;
 }
 .nav li ul a {
     border:none;
     text-align: center;
-	font-size: 16px;
+    font-size: 16px;
 }
 .nav li ul li {
     width:59px;
@@ -159,8 +179,8 @@ p {
     -moz-transition:height 200ms ease-in;
     -o-transition:height 200ms ease-in;
     transition:height 200ms ease-in;
-	width: 110px;
-	float: right;
+    width: 110px;
+    float: right;
 }
 .nav a:hover {
     text-decoration:none;
@@ -169,9 +189,15 @@ p {
     background:rgba(0,0,0,0.2);
 }
 .nav ul > li:hover ul li {
-    height:40px;
+    height:34px;
 }
 .link :hover {
+    background-color: #595959;
+}
+.link-sidebar :hover {
+    background-color: #595959;
+}
+.link-sidebar a:hover {
     background-color: #595959;
 }
 .link a:hover {
@@ -187,10 +213,53 @@ p {
     background-color: #595959;
 }
 
+/*Sidebar*/
+.sidebar {
+    overflow:hidden;
+    -webkit-transform:perspective(400) rotate3d(0,0,0,0);
+    transition:350ms;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    background-color: #333;
+    z-index: 1;
+}
+.sidebar-header a {
+    text-align: center;
+    transition: all .5s;
+    display:block;
+    padding:8px 16px;
+    color:#fff;
+    font-family: Open Sans;
+    text-decoration: none;
+    font-size: 20px;
+}
+.category a {
+    text-align: center;
+    transition: all .5s;
+    display:block;
+    padding:8px 16px;
+    color:#fff;
+    font-family: Open Sans;
+    text-decoration: none;
+    font-size: 20px;
+}
+.category a:hover {
+    background-color: #595959;
+}
+.sidebarexpand {
+    width: 160px;
+}
+
 /*Body*/
+.under-navbar {
+    background-color: #dddddd;
+    position: relative;
+    height: 30px;
+}
 .main {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0;
     display: block;
     background-color: #dddddd;
     height: 100%;
@@ -198,4 +267,11 @@ p {
     text-align: center;
     opacity: 1;
     top: 0px;
+}
+.container {
+    position: relative;
+    background-color: #dddddd;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
 }

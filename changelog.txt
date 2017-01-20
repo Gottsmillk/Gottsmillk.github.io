@@ -1,29 +1,63 @@
+To do:
+(nothing here for now!)
+
+v1.2.1.1 5/11/16
+- Added missing change for v1.2.1.0 in changelog
+
+v1.2.1.0 5/11/16
+- Removed filler link "#" for username button since it is only a dropdown
+- Changed label for body on index
+- Removed z-index for filler above body, unnecessary
+- Added a completely working sidebar, collapses when clicked outside or a link is chosen
+- Changed text for notifications/login to just notifications
+
+v1.2.0.5 5/11/16
+- Fixed a small typo on changelog
+- Fixed nav button username's dropdown menu button sizes, had an abnormal gap between them before
+- Added wrapper container to contain body by 10% width on each side
+- Added a filler above body to move body down 30px and create space
+
+v1.2.0.4 5/9/16
+- Fixed formatting for changelog, recent entries were not separated from one another
+- Added a to-do list
+- Fixed a small typo on changelog
+
+v1.2.0.3 5/8/16
+- Fixed remaining navbar issues, scales correctly for most resolutions now
+- Added more filler text to fit larger resolutions
+
 v1.2.0.2 5/8/16
 - Fixed javascript error
 - Fixed navbar left hand buttons being gray instead of white
 - Re-shifted right hand buttons to the left slightly
+
 v1.2.0.1 5/8/16
 - Renamed homepage-javascript to homepage for better usability and hopefully fixing javascript not
 working anymore
+
 v1.2.0.0 5/8/16
 - Cleaned up code
 - Revamped code structure completely
 - Fixed some changelog miswording
 - Removed banner image, looks uglier but results in cleaner code. Might reimplement later.
-- Fixed navbar changing size, revamped navbar behavior, should work with chromium now
+- Fixed navbar changing size, revamped navbar behavior, should work with Chromium Wheel Scroller now
 - Found correct text for sidebar button for nav bar
 - Renamed navbar.js to fit its function more, it is now homepage-javascript.js
+
 v1.1.1.0 5/8/16
 - Fixed date error in changelog, 2016 instead of 2015
 - Removed logo changing on scroll, conflicted with different resolutions
 - Attempt #3 at fixing Chromium Wheel Scroller problem, this time trying to override Chromium's
 actions
+
 v1.1.0.2 5/7/16
 - Attempt #2 at detecting if Chromium Wheel Scroller extension is enabled for chrome and to prompt
 the user to add it to the blacklist if it is detected.
+
 v1.1.0.1 5/7/16
 - Attempt #1 at detecting if Chromium Wheel Scroller extension is enabled for chrome and to prompt
 the user to add it to the blacklist if it is detected.
+
 v1.1.0.0 5/7/16
 - Bugs: seems to be glitched when used by chromium scroll wheel (only when bouncy edge is enabled)
 - Changed left hand navigation buttons for temporary names (first is sidebar that is not implemented yet

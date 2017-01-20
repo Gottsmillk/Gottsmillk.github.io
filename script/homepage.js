@@ -1,15 +1,35 @@
 // Navbar static at top after scroll, fixes navbar size after scroll, fixes body positioning after scroll
 $(window).scroll(function() {
   if ($(document).scrollTop() < 80) {
-	$('.nav').css("position", "relative");
-	$('.nav').css("width", "98.76%");
-	$('.main').css("margin-top", "0px");
+	$('.nav').css("position", "absolute");
+	$('.nav').css("top", "80px");
   } else {
 	$('.nav').css("position", "fixed");
-	$('.nav').css("width", "100%");
-	$('.main').css("margin-top", "40px");
+	$('.nav').css("top", "0px");	
   }
 });
+
+//Sidebar opening and collapsing
+function sidebar() {
+	$('.sidebar').toggleClass('sidebarexpand');
+}
+
+// Close the sidebar menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.link-sidebar a') 
+  && !event.target.matches('.sidebar')
+  && !event.target.matches('.sidebar-header a')) {
+
+    var dropdowns = document.getElementsByClassName("sidebar");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('sidebarexpand')) {
+        openDropdown.classList.remove('sidebarexpand');
+      }
+    }
+  }
+}
 
 // Smooth scrolling on scroll wheel
 $(function(){	
